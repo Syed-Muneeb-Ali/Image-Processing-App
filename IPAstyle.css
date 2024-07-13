@@ -1,0 +1,120 @@
+*{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    font-weight: 700;
+    margin-bottom: 4rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#capture-btn {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 5px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 12px;
+  height: 40px;
+  width: 120px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 2rem;
+}
+
+#capture-btn:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+#capture-btn:active {
+  outline: 0;
+}
+
+#capture-btn:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+@media (max-width: 120px) {
+    #capture-btn {
+    height: 40px;
+  }
+}
+
+#video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+#canvas {
+    display: none;
+}
+
+.grid img{
+    display: none;
+    border: solid black 1px;
+}
+
+.grid{
+    width: 60%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.image {
+    position: relative;
+    width: 270px;
+}
+.image img {
+    display: none;
+    border: solid 1px black;
+    max-width: 100%;
+}
+
+.label{
+    display: none;
+    margin: 2px;
+    text-align: center;
+    font-size: medium;
+    
+}
+
+.image input[type="range"] {
+    display: none;
+    position: relative;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}

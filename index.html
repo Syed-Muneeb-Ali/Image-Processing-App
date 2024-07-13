@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="IPAstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>An Image Processing Application</h1>
+        <video id="video" autoplay></video>
+        <button id="capture-btn">
+            <span class="btn-txt">Capture Photo</span>
+        </button>
+        <canvas id="canvas"></canvas>
+        <div class="grid">
+            <div class="image">
+                <img id="photo" src="#" alt="Captured Photo">
+                <h3 class="label">Webcam image</h3>
+            </div>
+            <div class="image" id="gray">
+                <img id="gray-image" src="#" alt="Gray Photo">
+                <h3 class="label">Grayscale and brightness + 20%</h3>
+            </div>
+            <div></div>
+            <div class="image">
+                <img id="red-channel" src="#" alt="red channel">
+                <h3 class="label">Red channel</h3>
+            </div>
+            <div class="image">
+                <img id="green-channel" src="#" alt="green channel">
+                <h3 class="label">Green channel</h3>
+            </div>
+            <div class="image">
+                <img id="blue-channel" src="#" alt="blue channel">
+                <h3 class="label">Blue channel</h3>
+            </div>
+            <div class="image">
+                <img id="red-thresholded" src="#" alt="Red Thresholded Photo">
+                <input type="range" id="red-threshold" min="1" max="255" value="128">
+                <h3 class="label">Red threshold image</h3>
+            </div>
+            <div class="image">
+                <img id="green-thresholded" src="#" alt="Green Thresholded Photo">
+                <input type="range" id="green-threshold" min="1" max="255" value="128">
+                <h3 class="label">Green threshold image</h3>
+            </div>
+            <div class="image">
+                <img id="blue-thresholded" src="#" alt="Blue Thresholded Photo">
+                <input type="range" id="blue-threshold" min="1" max="255" value="128">
+                <h3 class="label">Blue threshold image</h3>
+            </div>
+            <div class="image">
+                <img id="photo-again" src="#" alt="Captured Photo">
+                <h3 class="label">Webcam image</h3>
+            </div>
+            <div class="image">
+                <img id="ycbcr-image" src="#" alt="YCbCr Image">
+                <h3 class="label">YCbCr color space</h3>
+            </div>
+            <div class="image">
+                <img id="hsv-image" src="#" alt="HSV Image">
+                <h3 class="label">HSV color space</h3>
+            </div>
+            
+            <div class="image">
+                <img id="blur-image" src="#" alt="Blurred Image">
+                <h3 class="label">Blur face image</h3>
+            </div>
+
+
+            <div class="image">
+                <img id="ycbcr-thresholded" src="#" alt="YCbCr Thresholded Photo">
+                <input type="range" id="ycbcr-threshold" min="1" max="255" value="128">
+                <h3 class="label">YCbCr threshold image</h3>
+            </div>
+            <div class="image">
+                <img id="hsv-thresholded" src="#" alt="HSV Thresholded Photo">
+                <input type="range" id="hsv-threshold" min="1" max="255" value="128">
+                <h3 class="label">HSV threshold image</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ml5@0.7.0/dist/ml5.min.js"></script>
+    <script src="IPAscript.js"></script>
+</body>
+</html>
